@@ -2,13 +2,13 @@ package service;
 
 import java.util.Objects;
 
-public class Employee {
+public class EmployeeService {
     private String firstName;
     private String lastName;
     private Integer department;
     private Integer wage;
 
-    public Employee(String lastName, String firstName, Integer department, Integer wage) {
+    public EmployeeService(String lastName, String firstName, Integer department, Integer wage) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.department = department;
@@ -63,7 +63,7 @@ public class Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
+        EmployeeService employee = (EmployeeService) o;
         return Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName);
     }
 
@@ -72,4 +72,4 @@ public class Employee {
         return Objects.hash(firstName, lastName);
     }
 }
-}
+
